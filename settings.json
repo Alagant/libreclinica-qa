@@ -1,0 +1,31 @@
+{
+    "environments": {
+        "prod": {
+            "base_url": "https://prod.example.com",
+            "browser": "chrome",
+            "defaultTimeout": 10,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "123456"
+            }
+        },
+        "dev": {
+            "base_url": "http://localhost:8080/LibreClinica",
+            "browser": "chrome",
+            "defaultTimeout": 10,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "123456"
+            }
+        },
+        "qa": {
+            "base_url": "http://localhost:8080/LibreClinica",
+            "browser": "chrome",
+            "defaultTimeout": 10,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "123456"
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates the integration of Python, Behave, and Selenium for behavior-driven testing of LibreClinica's web application. The combination of Behave (a BDD framework) and Selenium (a web testing tool) allows you to write and automate tests in a more human-readable, behavior-focused manner.
+This project demonstrates the integration of Python, Behave, and Selenium for behavior-driven testing of LibreClinica's web application. The combination of Behave (a BDD framework) and Selenium (a web testing tool) allows to write and automate tests in a more human-readable, behavior-focused manner. [ToDo: Change the overview]
 
 ## Dependencies
 
@@ -13,7 +13,7 @@ Below is a table showing the project's dependencies:
 | Python            | >=3.8     | Python programming language                     |
 | Behave            | >=1.2.6   | Behavior-driven testing framework for Python    |
 | Selenium          | >=4.14.0  | Web testing tool for automating browser actions |
-| Allure Reports Server    | >= 2.24.1 | A flexible lightweight multi-language test report tool designed to create fancy and clear testing reports. |
+| Allure Reports    | >= 2.24.1 | A flexible lightweight multi-language test report tool designed to create fancy and clear testing reports. |
 
 ## Installation
 
@@ -41,7 +41,7 @@ Below is a table showing the project's dependencies:
 
 3. Write your feature files in the `features` directory using Behave's Gherkin syntax.
 
-4. Implement your step definitions in the `features/steps` directory using Python.
+4. Implement your step definitions in the `tests/features/steps` directory using Python.
 
 5. Run your tests using Behave:
 
@@ -53,7 +53,7 @@ Below is a table showing the project's dependencies:
 
 ## Configuration
 
-- You can configure browser-specific settings and URLs in the test environment in the `environment.py` file.
+- You can configure browser-specific settings and URLs in the test environment in the `settings.json` file.
 
 ## Contributing
 
@@ -69,8 +69,6 @@ Contributions to this project are welcome. Please follow these guidelines:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+#TBD
 
 ---
-
-This README provides an overview of the project, its dependencies, installation instructions, and usage guidelines. You can customize it to suit your project's specific needs.
