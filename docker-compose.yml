@@ -1,0 +1,28 @@
+version: '3'
+services:
+  libreclinica-qa:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: libreclinica-qa
+    container_name: libreclinica-qa
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./tests:/app/tests
+      - ./allure-results:/allure-results
+  
+  allure-reports-server:
+    build: 
+      context: ./allure-service # Build the image from allure-service dir
+    image: allure-reports-server
+    container_name: allure-reports-server
+    depends_on:
+      - libreclinica-qa
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./allure-results:/allure-results
+
+volumes:
+  allure-results:
