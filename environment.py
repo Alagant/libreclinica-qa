@@ -28,6 +28,12 @@ if environment in config_data["environments"]:
     DATA_MANAGER_USERNAME = settings["credentials"].get("dm_username")
     DATA_MANAGER_PASSWORD = settings["credentials"].get("dm_password")
     DRIVER_PATH = settings.get("driver_default_path")
+    CONFLUENCE_USERNAME = settings["confluence_config"]["credentials"].get("username")
+    CONFLUENCE_PASSWORD = settings["confluence_config"]["credentials"].get("password")
+    CONFLUENCE_PAGEID = settings["confluence_config"].get("parentPageId")
+    CONFLUENCE_URL = settings["confluence_config"].get("url")
+    CONFLUENCE_SPACENAME = settings["confluence_config"].get("spaceName")
+    CONFLUENCE_ACCESS_TOKEN = settings["confluence_config"]["credentials"].get("access_token")
 
     print(f'Running Browser {str(BROWSER).upper()} | Host: {str(BASE_URL)} | environment: {str(environment).upper()}')
     

@@ -54,3 +54,6 @@ class Utils:
             print(f'File successfully saved at {file_path}')
         except Exception as ex:
             print(f'An error ocurred while saving file {str(ex)}')
+    
+    def get_timestamp_as_string(self):
+        return time.strftime("%Y-%m-%dT%H-%M", time.localtime())
