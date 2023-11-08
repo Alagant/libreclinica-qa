@@ -20,7 +20,7 @@ services:
     depends_on:
       - libreclinica-qa
     ports:
-      - "5050:5050"
+      - "8186:5050"
     volumes:
       - ./allure-results:/allure-results
 
