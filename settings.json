@@ -1,0 +1,68 @@
+{
+    "environments": {
+        "prod": {
+            "base_url": "https://prod.example.com",
+            "browser": "chrome",
+            "defaultTimeout": 15,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "123456",
+                "dm_username": "dm_user",
+                "dm_password": "dm_password"
+            },
+            "confluence_config": {
+                "url": "https://confluence.example.com",
+                "parentPageId": "",
+                "spaceName": "",
+                "credentials": {
+                    "username": "confluence_user",
+                    "password": "confluence_password"
+                }
+            },
+            "headless": true
+        },
+        "dev": {
+            "base_url": "http://20.115.71.236:8183/LibreClinica",
+            "browser": "chrome",
+            "defaultTimeout": 15,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "F4acd23!",
+                "dm_username": "",
+                "dm_password": "dm_password"
+            },
+            "confluence_config": {
+                "url": "https://cdc-ctms.atlassian.net/",
+                "parentPageId": "2326566",
+                "spaceName": "~5f1f407b70fb250022aba4d3",
+                "credentials": {
+                    "username": "edenilsonpineda@outlook.com",
+                    "password": "confluence_password",
+                    "access_token": "ATATT3xFfGF0Ee42kvws4k2avKq0lj9b5M_l5q4crzir6FlWA2QTTjlP4MKeHABpD12Zrrxtoj0zeUB7CEX3h1Ucz55NdLhXKJnQhlSgk25QbjnhhVX94JQi5OVmHRSSBW8Nu7yMYKtUNyVB9SO2cY2jZxT5ybPlo46uxYqZd6CXMsfxO2MgcUY=775B1970"
+                }
+            },
+            "headless": true
+        },
+        "qa": {
+            "base_url": "http://20.115.71.236:8183/LibreClinica",
+            "browser": "chrome",
+            "defaultTimeout": 15,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "12345678!",
+                "dm_username": "dm_user",
+                "dm_password": "dm_password"
+            },
+            "confluence_config": {
+                "url": "https://confluence.example.com",
+                "parentPageId": "",
+                "spaceName": "",
+                "credentials": {
+                    "username": "confluence_user",
+                    "password": "confluence_password"
+                }
+            },
+            "headless": true
+        }
+    }
+}

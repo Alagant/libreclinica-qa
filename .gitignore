@@ -242,5 +242,3 @@ fabric.properties
 allure-results/*
 screenshots/
 reports/*
-
-settings.json
