@@ -1,6 +1,6 @@
 Feature: User Login
-    As a data manager user I want to login on the website 
-    So that I can access LibreClinica platform 
+    Feature: User Login
+    As a data manager user, I want to be able to securely log in to the LibreClinica platform.
     
     Background:
         Given Launch the browser
@@ -11,4 +11,7 @@ Feature: User Login
         And Provide root user credentials
         And Click on the Login button
         Then Login is successful and dashboard is shown along with a Welcome message
+        Then Generate a PDF report
+        Then Upload the PDF report to Confluence
+        Then Close the browser 
     

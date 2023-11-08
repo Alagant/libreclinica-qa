@@ -15,6 +15,14 @@ Below is a table showing the project's dependencies:
 | Selenium          | >=4.14.0  | Web testing tool for automating browser actions |
 | Allure Reports    | >= 2.24.1 | A flexible lightweight multi-language test report tool designed to create fancy and clear testing reports. |
 
+
+## BEFORE RUNNING
+Before running the application:
+
+- Rename the `settings.example.json` file to `settings.json`.
+- Configure your environment specific properties.
+- Define the `environment` (**dev**, **qa** or **prod** are valid values) that you need to test against it in the 'stage' property inside `behave.ini`. 
+
 ## Installation
 
 1. **Python**: If you don't have Python installed, download and install it from the [official Python website](https://www.python.org/).
@@ -53,7 +61,7 @@ Below is a table showing the project's dependencies:
 
 ## Configuration
 
-- You can configure browser-specific settings and URLs in the test environment in the `settings.json` file.
+- You can configure browser-specific settings, credentials, etc. in the test environment in the `settings.json` file.
 
 ## Contributing
 

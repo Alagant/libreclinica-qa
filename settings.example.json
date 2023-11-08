@@ -1,0 +1,70 @@
+{
+    "environments": {
+        "prod": {
+            "base_url": "https://prod.example.com",
+            "browser": "chrome",
+            "defaultTimeout": 15,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "",
+                "dm_username": "",
+                "dm_password": ""
+            },
+            "confluence_config": {
+                "url": "https://confluence.example.com",
+                "parentPageId": "",
+                "spaceId": "",
+                "credentials": {
+                    "username": "",
+                    "password": "",
+                    "access_token": ""
+                }
+            },
+            "headless": true
+        },
+        "dev": {
+            "base_url": "https://dev.example.com",
+            "browser": "chrome",
+            "defaultTimeout": 15,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "",
+                "dm_username": "",
+                "dm_password": ""
+            },
+            "confluence_config": {
+                "url": "https://confluence.example.com",
+                "parentPageId": "",
+                "spaceId": "",
+                "credentials": {
+                    "username": "",
+                    "password": "",
+                    "access_token": ""
+                }
+            },
+            "headless": true
+        },
+        "qa": {
+            "base_url": "https://qa.example.com",
+            "browser": "chrome",
+            "defaultTimeout": 15,
+            "credentials": {
+                "root_username": "root",
+                "root_password": "",
+                "dm_username": "",
+                "dm_password": ""
+            },
+            "confluence_config": {
+                "url": "https://confluence.example.com",
+                "parentPageId": "",
+                "spaceId": "",
+                "credentials": {
+                    "username": "",
+                    "password": "",
+                    "access_token": ""
+                }
+            },
+            "headless": true
+        }
+    }
+}

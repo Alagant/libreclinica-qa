@@ -239,6 +239,8 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 
-allure-results/
+allure-results/*
 screenshots/
-reports/
+reports/*
+
+settings.json
