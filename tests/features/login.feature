@@ -11,7 +11,5 @@ Feature: User Login
         And Provide root user credentials
         And Click on the Login button
         Then Login is successful and dashboard is shown along with a Welcome message
-        Then Generate a PDF report
-        Then Upload the PDF report to Confluence
-        Then Close the browser 
+        Then Close the browser
     

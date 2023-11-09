@@ -1,4 +1,5 @@
 import json
+import os
 from src.utils.utils import Utils
 from behave.configuration import Configuration
 
@@ -23,17 +24,14 @@ if environment in config_data["environments"]:
     BROWSER = settings.get("browser")
     DEFAULT_TIMEOUT = settings.get("defaultTimeout")
     HEADLESS = settings.get("headless")
-    ROOT_USERNAME = settings["credentials"].get("root_username")
-    ROOT_PASSWORD = settings["credentials"].get("root_password")
-    DATA_MANAGER_USERNAME = settings["credentials"].get("dm_username")
-    DATA_MANAGER_PASSWORD = settings["credentials"].get("dm_password")
+    ROOT_USERNAME = os.environ.get('LC_ROOT_USERNAME')
+    ROOT_PASSWORD = os.environ.get('LC_ROOT_PASSWORD')
     DRIVER_PATH = settings.get("driver_default_path")
-    CONFLUENCE_USERNAME = settings["confluence_config"]["credentials"].get("username")
-    CONFLUENCE_PASSWORD = settings["confluence_config"]["credentials"].get("password")
+    CONFLUENCE_USERNAME =  os.environ.get('CONFLUENCE_USERNAME')
     CONFLUENCE_PAGEID = settings["confluence_config"].get("parentPageId")
     CONFLUENCE_URL = settings["confluence_config"].get("url")
-    CONFLUENCE_SPACENAME = settings["confluence_config"].get("spaceName")
-    CONFLUENCE_ACCESS_TOKEN = settings["confluence_config"]["credentials"].get("access_token")
+    CONFLUENCE_SPACE_ID = os.environ.get('CONFLUENCE_SPACE_ID')
+    CONFLUENCE_ACCESS_TOKEN = os.environ.get('CONFLUENCE_ACCESS_TOKEN')
 
     print(f'Running Browser {str(BROWSER).upper()} | Host: {str(BASE_URL)} | environment: {str(environment).upper()}')
     
