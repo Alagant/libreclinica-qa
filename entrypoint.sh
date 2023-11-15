@@ -13,8 +13,8 @@ pwd
 echo "pwding"
 pwd
 . venv/bin/activate
-python3 -m src.utils.commit_to_pdf "$@"
-python3 -m upload_report
+venv/bin/python3 -m src.utils.commit_to_pdf "$@"
+venv/bin/python3 -m upload_report
 
 # sleep 2m
 # sleep 5m
