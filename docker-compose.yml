@@ -18,6 +18,7 @@ services:
       - ./tests:/app/tests
       - ./app:/app
       - ./allure-results:/allure-results
+    command: /app/entrypoint.sh
   
   allure-reports-server:
     build: 
