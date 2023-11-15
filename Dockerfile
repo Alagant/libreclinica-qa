@@ -20,8 +20,8 @@ COPY . .
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN apt-get install ./google-chrome-stable_current_amd64.deb -y
 RUN python3 -m venv venv
-RUN . venv/bin/activate
-RUN pip install --no-cache-dir -r requirements.txt
+#RUN venv/bin/python -mp venv/bin/activate
+RUN venv/bin/python -mpip install --no-cache-dir -r requirements.txt
 RUN chmod a+x /entrypoint.sh
 RUN ls -la /
 
