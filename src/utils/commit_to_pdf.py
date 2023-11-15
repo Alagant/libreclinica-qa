@@ -4,9 +4,9 @@ from src.utils.confluence_helper import ConfluenceHelper
 from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGEID, CONFLUENCE_SPACE_ID
 
 print(f"args {sys.argv}")
-message = """##Commit {}
-{}
-{}
+message = """##Commit {}\n
+{}\n
+{}\n
 {}""".format(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
 fileroot = "message"
 with open(f"{fileroot}.txt", "w") as tfil:
