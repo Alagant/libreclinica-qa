@@ -5,7 +5,8 @@ from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE
 
 message = """##{}
 {}
-{}""".format(sys.argv[1], sys.argv[2], sys.argv[3])
+{}
+{}""".format(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
 fileroot = "message"
 with open(f"{fileroot}.txt", "w") as tfil:
     tfil.write(message)
