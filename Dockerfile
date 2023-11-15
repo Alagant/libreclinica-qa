@@ -15,14 +15,14 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-COPY . .
+COPY . /app
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN apt-get install ./google-chrome-stable_current_amd64.deb -y
 RUN python3 -m venv venv
 RUN . venv/bin/activate
 RUN pip install --no-cache-dir -r requirements.txt
-RUN chmod a+x ./entrypoint.sh
+RUN chmod a+x /app/entrypoint.sh
 
 
 
