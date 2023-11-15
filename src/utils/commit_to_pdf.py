@@ -3,6 +3,7 @@ from src.utils.confluence_helper import ConfluenceHelper
 #from src.utils.report import ReportGenerator
 from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGEID, CONFLUENCE_SPACE_ID
 
+print(f"args {sys.argvs}")
 message = """##{}
 {}
 {}
