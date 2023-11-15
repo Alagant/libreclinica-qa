@@ -12,8 +12,9 @@ pwd
 
 echo "pwding"
 pwd
-python -m src.utils.commit_to_pdf $(Build.SourceVersion) $(Build.BuildId) $(Build.BuildNumber) $(Build.SourceVersionMessage)
-python -m upload_report
+. venv/bin/activate
+python3 -m src.utils.commit_to_pdf $@
+python3 -m upload_report
 
 # sleep 2m
 # sleep 5m
