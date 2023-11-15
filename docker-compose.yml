@@ -19,7 +19,7 @@ services:
       - ./app:/app
       - ./allure-results:/allure-results
     entrypoint: /bin/bash -c
-    command: /app/entrypoint.sh
+    command: ls /app && /app/entrypoint.sh
     #command: ./app/entrypoint.sh
   
   allure-reports-server:
