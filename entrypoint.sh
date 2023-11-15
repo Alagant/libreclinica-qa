@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run Behave tests
 echo "Running Behave tests"
-behave
+venv/bin/python3 -m behave
 
 pwd
 
