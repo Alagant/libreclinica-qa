@@ -13,6 +13,8 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     default-jre \
     default-jdk
 
+# Pandoc requirements
+sudo apt install texlive-latex-base pandoc -y
 COPY . .
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -20,7 +22,6 @@ RUN apt-get install ./google-chrome-stable_current_amd64.deb -y
 RUN python3 -m venv venv
 RUN venv/bin/python -mpip install --no-cache-dir -r requirements.txt
 RUN chmod a+x /entrypoint.sh
-RUN ls -la /
 
 
 ENTRYPOINT [ "./entrypoint.sh" ]
