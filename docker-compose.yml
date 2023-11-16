@@ -15,8 +15,12 @@ services:
     #command: $(Build.SourceVersion) $(Build.BuildId) $(Build.BuildNumber) $(Build.SourceVersionMessage)
     #command: ./app/entrypoint.sh
     environment:
-      - envidock=${CONFLUENCE_USERNAME}
-  
+      - CONFLUENCE_USERNAME=${CONFLUENCE_USERNAME}
+      - CONFLUENCE_ACCESS_TOKEN=${CONFLUENCE_ACCESS_TOKEN}
+      - CONFLUENCE_SPACE_ID=${CONFLUENCE_SPACE_ID}
+      - LC_ROOT_USERNAME=${LC_ROOT_USERNAME}
+      - LC_ROOT_PASSWORD=${LC_ROOT_PASSWORD}
+
   allure-reports-server:
     build: 
       context: ./allure-service # Build the image from allure-service dir
