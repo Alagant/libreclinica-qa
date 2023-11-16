@@ -12,8 +12,6 @@ services:
       - ./tests:/tests
       - ./allure-results:/allure-results
     entrypoint: /entrypoint.sh
-    #command: $(Build.SourceVersion) $(Build.BuildId) $(Build.BuildNumber) $(Build.SourceVersionMessage)
-    #command: ./app/entrypoint.sh
     environment:
       - CONFLUENCE_USERNAME=${CONFLUENCE_USERNAME}
       - CONFLUENCE_ACCESS_TOKEN=${CONFLUENCE_ACCESS_TOKEN}
