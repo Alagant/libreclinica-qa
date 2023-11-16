@@ -11,7 +11,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     chromium-driver \
     chromium-browser \
     default-jre \
-    default-jdk \
+    default-jdk
 
 #Non interactive tzdata install
 #RUN ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime
