@@ -39,7 +39,8 @@ class ReportUploader:
         self.generate_report()
 
         confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)
-        confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=self.__file_to_upload, pdf_file_name=Path(self.__file_to_upload).name, space=CONFLUENCE_SPACE_ID)   
+        confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=self.__file_to_upload, pdf_file_name=Path(self.__file_to_upload).name,
+                                                   space=CONFLUENCE_SPACE_ID, comment=f"Automated test report for build {os.environ['build_number']}")
 
 
     def run(self):
