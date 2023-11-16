@@ -21,7 +21,7 @@ services:
       - CONFLUENCE_PAGEID=${CONFLUENCE_PAGEID}
       - LC_ROOT_USERNAME=${LC_ROOT_USERNAME}
       - LC_ROOT_PASSWORD=${LC_ROOT_PASSWORD}
-      - source_version=$(Build.SourceVersion)
+      - source_version=${source_version}
       - build_id=${build_id}
       - build_number=${build_number}
       - commit_message=${build_number}
