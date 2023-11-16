@@ -9,9 +9,10 @@ message = """##Commit {}\n
 {}""".format(os.environ['source_version'], os.environ['build_id'], os.environ['build_number'], os.environ['commit_message'])
 tfile = tempfile.NamedTemporaryFile(mode="w", delete=False, suffix=".md")
 tfile.write(message)
+tfile.close()
 timestamp = time.strftime("%Y-%m-%dT%H-%M", time.localtime())
 print(f"Message written to {tfile.name}")
-command=f"pandoc {tfile.name} -f markdown -t pdf -o {tfile.name}.pdf"
+command=f"pandoc {tfile.name} -f markdown -t pdf -o {tfile.name}.pdf --pdf-engine=pdflatex"
 print("Mesage: " + message)
 print("Execute command: " + command)
 os.system(command)
