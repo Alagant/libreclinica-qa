@@ -3,12 +3,10 @@
 echo "Running Behave tests"
 venv/bin/python3 -m behave
 
-pwd
-
 # Copy the generated results to the shared volume
 ##cp -r /app/allure-results/* /allure-results
 
-# Run the post execution python script which uploades the pdf report to Confluence
+# Run the post execution python script which uploads the pdf report to Confluence
 
 echo "pwding $@"
 pwd
