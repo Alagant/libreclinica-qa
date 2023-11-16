@@ -15,6 +15,8 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 
 # Pandoc requirements
 RUN apt install texlive-latex-base pandoc -y
+# From the suggested packages:
+RUN apt install texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended -y
 COPY . .
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
