@@ -14,6 +14,8 @@ services:
     entrypoint: /entrypoint.sh
     #command: $(Build.SourceVersion) $(Build.BuildId) $(Build.BuildNumber) $(Build.SourceVersionMessage)
     #command: ./app/entrypoint.sh
+    environment:
+      - envidock=dev
   
   allure-reports-server:
     build: 
