@@ -5,12 +5,12 @@ services:
       context: .
       dockerfile: Dockerfile
     image: libreclinica-qa
-    environment:
-      - CONFLUENCE_USERNAME=$(CONFLUENCE_USERNAME)
-      - CONFLUENCE_ACCESS_TOKEN=$(CONFLUENCE_ACCESS_TOKEN)
-      - CONFLUENCE_SPACE_ID=$(CONFLUENCE_SPACE_ID)
-      - LC_ROOT_USERNAME=${LC_ROOT_USERNAME}
-      - LC_ROOT_PASSWORD=${LC_ROOT_PASSWORD}
+    #environment:
+    #  - CONFLUENCE_USERNAME=$(CONFLUENCE_USERNAME)
+    #  - CONFLUENCE_ACCESS_TOKEN=$(CONFLUENCE_ACCESS_TOKEN)
+    #  - CONFLUENCE_SPACE_ID=$(CONFLUENCE_SPACE_ID)
+    #  - LC_ROOT_USERNAME=${LC_ROOT_USERNAME}
+    #  - LC_ROOT_PASSWORD=${LC_ROOT_PASSWORD}
     container_name: libreclinica-qa
     extra_hosts:
       - "host.docker.internal:host-gateway"
