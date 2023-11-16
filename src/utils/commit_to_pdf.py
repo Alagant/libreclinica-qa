@@ -7,7 +7,7 @@ print(f"args {sys.argv}")
 message = """##Commit {}\n
 {}\n
 {}\n
-{}""".format(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+{}""".format(os.environ['source_version'], os.environ['build_id'], os.environ['build_number'], os.environ['commit_message'])
 fileroot = "message"
 with open(f"{fileroot}.txt", "w") as tfil:
     tfil.write(message)

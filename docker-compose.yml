@@ -18,7 +18,7 @@ services:
       - ./tests:/tests
       - ./allure-results:/allure-results
     entrypoint: /entrypoint.sh
-    command: $(Build.SourceVersion) $(Build.BuildId) $(Build.BuildNumber) $(Build.SourceVersionMessage)
+    #command: $(Build.SourceVersion) $(Build.BuildId) $(Build.BuildNumber) $(Build.SourceVersionMessage)
     #command: ./app/entrypoint.sh
   
   allure-reports-server:
