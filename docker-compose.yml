@@ -22,7 +22,7 @@ services:
       - source_version=${source_version}
       - build_id=${build_id}
       - build_number=${build_number}
-      - commit_message=${build_number}
+      - commit_message=${commit_message}
 
   allure-reports-server:
     build: 
