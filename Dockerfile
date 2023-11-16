@@ -1,7 +1,6 @@
 FROM ubuntu:22.04
 LABEL maintainer="edenilsonpineda@outlook.com"
 ARG bulild_test_arg=testval
-ENV source_version
 ENV envie=tester
 
 # Install the required dependencies
