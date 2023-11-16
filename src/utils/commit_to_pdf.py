@@ -15,6 +15,7 @@ command=f"pandoc {tfile.name} -f markdown -t pdf -o {tfile.name}.pdf"
 print("Mesage: " + message)
 print("Execute command: " + command)
 os.system(command)
+os.system(f"ls -l {tfile.name}*")
 server_filename= f"message_{timestamp}.pdf"
 print(f"Uploading to Confluence URL {CONFLUENCE_URL}, with username {CONFLUENCE_USERNAME} and pageid {CONFLUENCE_PAGEID} the PDF file {server_filename}")
 confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)

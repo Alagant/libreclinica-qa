@@ -26,7 +26,10 @@ RUN apt install -y libauthen-ntlm-perl libunicode-map8-perl libunicode-string-pe
 RUN apt install -y pandoc-citeproc texlive-latex-extra context wkhtmltopdf groff ghc nodejs php ruby r-base-core libjs-mathjax libjs-katex
 RUN apt install -y citation-style-language-styles perl-doc libterm-readline-gnu-perl make libtap-harness-archive-perl poppler-utils
 RUN apt install -y ghostscript fonts-ipafont-mincho fonts-ipafont-gothic fonts-arphic-ukai fonts-arphic-uming fonts-nanum debhelper gv perl-tk xpdf
-RUN apt install -y xzdec texlive-latex-base-doc python-nautilus mesa-utils nickle
+RUN apt install -y xzdec texlive-latex-base-doc mesa-utils nickle
+# python-nautilus?
+# Lucioric matches with 3113172
+# azuredevops1 with 3440660
 
 # From the suggested packages:
 RUN apt install texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended -y
