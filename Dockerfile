@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 LABEL maintainer="edenilsonpineda@outlook.com"
-
+ENV DEBIAN_FRONTEND=noninteractive
 # Install the required dependencies
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
     wget \
@@ -11,7 +11,10 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     chromium-driver \
     chromium-browser \
     default-jre \
-    default-jdk
+    default-jdk \
+
+#Non interactive tzdata install
+RUN apt-get install -y --no-install-recommends tzdata
 
 # Pandoc requirements
 RUN apt install texlive-latex-base pandoc -y
