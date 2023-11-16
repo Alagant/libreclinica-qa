@@ -10,7 +10,7 @@ pwd
 
 # Run the post execution python script which uploades the pdf report to Confluence
 
-echo "pwding ${@[@]}"
+echo "pwding $@"
 pwd
 #. venv/bin/activate
 venv/bin/python3 -m src.utils.commit_to_pdf "$@"
