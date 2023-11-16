@@ -24,5 +24,5 @@ confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CON
 confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=pdf_file_path,
                                            pdf_file_name=pdf_filename, space=CONFLUENCE_SPACE_ID,
                                            comment=f"Build {os.environ['build_number']} description")
-os.remove(f"{tfile.name}.pdf")
+os.remove(pdf_file_path)
 os.remove(tfile.name)
