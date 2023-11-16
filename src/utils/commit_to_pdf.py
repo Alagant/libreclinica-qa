@@ -19,7 +19,7 @@ print("Message: " + message)
 print("Execute command: " + command)
 os.system(command)
 os.system(f"ls -l {tfile.name}*")
-print(f"Uploading to Confluence URL {CONFLUENCE_URL}, with username {CONFLUENCE_USERNAME} and pageid {CONFLUENCE_PAGEID} the PDF file {server_filename}")
+print(f"Uploading to Confluence URL {CONFLUENCE_URL}, with username {CONFLUENCE_USERNAME} and pageid {CONFLUENCE_PAGEID} the PDF file {pdf_file_path}")
 confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)
 confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=pfd_file_path,
                                            pdf_file_name=pdf_filename, space=CONFLUENCE_SPACE_ID,
