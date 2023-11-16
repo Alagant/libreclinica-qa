@@ -12,16 +12,17 @@ tfile.write(message)
 tfile.close()
 timestamp = time.strftime("%Y-%m-%dT%H-%M", time.localtime())
 print(f"Message written to {tfile.name}")
-command=f"pandoc {tfile.name} -f markdown -t pdf -o {tfile.name}.pdf --pdf-engine=pdflatex"
+pdf_filename= f"message_{timestamp}.pdf"
+pfd_file_path = os.path.join("/tmp", pdf_filename)
+command=f"pandoc {tfile.name} -f markdown -t pdf -o {pfd_file_path} --pdf-engine=pdflatex"
 print("Mesage: " + message)
 print("Execute command: " + command)
 os.system(command)
 os.system(f"ls -l {tfile.name}*")
-server_filename= f"message_{timestamp}.pdf"
 print(f"Uploading to Confluence URL {CONFLUENCE_URL}, with username {CONFLUENCE_USERNAME} and pageid {CONFLUENCE_PAGEID} the PDF file {server_filename}")
 confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)
-confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=f"{tfile.name}.pdf",
-                                           pdf_file_name=server_filename, space=CONFLUENCE_SPACE_ID,
+confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=pfd_file_path,
+                                           pdf_file_name=pdf_filename, space=CONFLUENCE_SPACE_ID,
                                            comment=f"Build {os.environ['build_number']} description")
 os.remove(f"{tfile.name}.pdf")
 os.remove(tfile.name)
