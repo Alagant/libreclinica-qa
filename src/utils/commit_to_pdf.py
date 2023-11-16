@@ -15,7 +15,7 @@ print(f"Message written to {tfile.name}")
 pdf_filename= f"message_{timestamp}.pdf"
 pfd_file_path = os.path.join("/tmp", pdf_filename)
 command=f"pandoc {tfile.name} -f markdown -t pdf -o {pfd_file_path} --pdf-engine=pdflatex"
-print("Mesage: " + message)
+print("Message: " + message)
 print("Execute command: " + command)
 os.system(command)
 os.system(f"ls -l {tfile.name}*")
