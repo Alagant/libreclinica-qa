@@ -15,7 +15,7 @@ services:
     #command: $(Build.SourceVersion) $(Build.BuildId) $(Build.BuildNumber) $(Build.SourceVersionMessage)
     #command: ./app/entrypoint.sh
     environment:
-      - envidock=dev
+      - envidock=${CONFLUENCE_USERNAME}
   
   allure-reports-server:
     build: 
