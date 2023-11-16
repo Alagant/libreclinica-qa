@@ -3,9 +3,9 @@ from src.utils.confluence_helper import ConfluenceHelper
 from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGEID, CONFLUENCE_SPACE_ID
 
 print(f"args {sys.argv},\nos.environ {os.environ}")
-message = """##Commit {}\n
-{}\n
-{}\n
+message = """#Commit {}\n
+Build ID: {}\n
+Build number: {}\n
 {}""".format(os.environ['source_version'], os.environ['build_id'], os.environ['build_number'], os.environ['commit_message'])
 tfile = tempfile.NamedTemporaryFile(mode="w", delete=False, suffix=".md")
 tfile.write(message)
