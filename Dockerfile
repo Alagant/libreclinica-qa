@@ -1,5 +1,7 @@
 FROM ubuntu:22.04
 LABEL maintainer="edenilsonpineda@outlook.com"
+ARG bulild_test_arg=testval
+ARG source_version
 
 # Install the required dependencies
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
