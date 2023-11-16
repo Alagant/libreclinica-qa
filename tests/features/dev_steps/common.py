@@ -106,7 +106,8 @@ def step_impl_upload_pdf_to_confluence(context):
         confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)
 
         confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=latest_report, 
-                            pdf_file_name=Path(latest_report).name, space=CONFLUENCE_SPACE_ID)
+                            pdf_file_name=Path(latest_report).name, space=CONFLUENCE_SPACE_ID,
+                                                   comment="Uploaded via automated test execution")
     except Exception as ex:
         print(f'An error ocurred while uploading the PDF report to Confluence {str(ex)}')
         raise

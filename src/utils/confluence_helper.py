@@ -9,7 +9,7 @@ class ConfluenceHelper:
             username=username,
             password=password)
     
-    def upload_pdf_to_confluence(self, page_id, pdf_file_path, pdf_file_name, space):
+    def upload_pdf_to_confluence(self, page_id, pdf_file_path, pdf_file_name, space, comment):
         log.info(f'Uploading {pdf_file_name} to Confluence...')
-        self.confluence.attach_file(filename=pdf_file_path, page_id=page_id, space=space, comment="Uploaded via automated test execution")
+        self.confluence.attach_file(filename=pdf_file_path, page_id=page_id, space=space, comment=comment)
         log.info(f'File uploaded successfully at: {self.confluence.url}/wiki/pages/viewpageattachments.action?pageId={page_id}')
