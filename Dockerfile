@@ -28,8 +28,6 @@ RUN apt install -y citation-style-language-styles perl-doc libterm-readline-gnu-
 RUN apt install -y ghostscript fonts-ipafont-mincho fonts-ipafont-gothic fonts-arphic-ukai fonts-arphic-uming fonts-nanum debhelper gv perl-tk xpdf
 RUN apt install -y xzdec texlive-latex-base-doc mesa-utils nickle
 # python-nautilus?
-# Lucioric matches with 3113172
-# azuredevops1 with 3440660
 
 # From the suggested packages:
 RUN apt install texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended -y
