@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 LABEL maintainer="edenilsonpineda@outlook.com"
 ARG bulild_test_arg=testval
 ENV source_version
-ENV envie=test env var
+ENV envie=tester
 
 # Install the required dependencies
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
