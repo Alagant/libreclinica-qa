@@ -21,13 +21,7 @@ RUN dpkg-reconfigure --frontend noninteractive tzdata
 # Pandoc requirements
 RUN apt install texlive-latex-base pandoc -y
 RUN apt install -y cpp-doc gcc-11-locales fonts-noto fonts-freefont-ttf
-#RUN apt install -y fonts-texgyre libdigest-hmac-perl libgssapi-perl colord gdbm-l10n gvfs libcrypt-ssleay-perl librsvg2-bin libsub-name-perl libbusiness-isbn-perl
-#RUN apt install -y libauthen-ntlm-perl libunicode-map8-perl libunicode-string-perl xml-twig-tools texlive-latex-recommended texlive-xetex texlive-luatex
-#RUN apt install -y pandoc-citeproc texlive-latex-extra context wkhtmltopdf groff ghc nodejs php ruby r-base-core libjs-mathjax libjs-katex
-#RUN apt install -y citation-style-language-styles perl-doc libterm-readline-gnu-perl make libtap-harness-archive-perl poppler-utils
-#RUN apt install -y ghostscript fonts-ipafont-mincho fonts-ipafont-gothic fonts-arphic-ukai fonts-arphic-uming fonts-nanum debhelper gv perl-tk xpdf
-#RUN apt install -y xzdec texlive-latex-base-doc mesa-utils nickle
-# python-nautilus?
+
 
 # From the suggested packages:
 RUN apt install texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended -y
