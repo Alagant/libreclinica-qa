@@ -15,8 +15,8 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 
 #Non interactive tzdata install
 #RUN ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime
-RUN apt-get install -y --no-install-recommends tzdata
-RUN dpkg-reconfigure --frontend noninteractive tzdata
+#RUN apt-get install -y --no-install-recommends tzdata
+#RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 # Pandoc requirements
 RUN apt install texlive-latex-base pandoc -y
