@@ -14,7 +14,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     default-jdk
 
 # Pandoc requirements
-sudo apt install texlive-latex-base pandoc -y
+RUN apt install texlive-latex-base pandoc -y
 COPY . .
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
