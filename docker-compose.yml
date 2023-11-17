@@ -23,6 +23,8 @@ services:
       - build_id=${build_id}
       - build_number=${build_number}
       - commit_message=${commit_message}
+      - TZ=America/Mexico_City
+      - DEBIAN_FRONTEND=noninteractive
 
   allure-reports-server:
     build: 
