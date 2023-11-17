@@ -27,6 +27,7 @@ try:
                                            comment=f"Build {os.environ['build_number']} description")
 except Exception as e:
     print(f"Exception {e} while uploading to Confluence")
+    print("eserr", file=sys.stderr)
     raise e
 finally:
     print("Removing temporary files")
