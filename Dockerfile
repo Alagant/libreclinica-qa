@@ -11,7 +11,8 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     chromium-driver \
     chromium-browser \
     default-jre \
-    default-jdk
+    default-jdk \
+    tzdata
 
 #Non interactive tzdata install
 #RUN ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime
@@ -22,9 +23,11 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 RUN apt install texlive-latex-base pandoc -y
 RUN apt install -y cpp-doc gcc-11-locales fonts-noto fonts-freefont-ttf
 
-
-# From the suggested packages:
+# From the suggested packages for texlive:
 RUN apt install texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended -y
+
+#Set timezone
+RUN timedatectl set-timezone America/Mexico_City
 COPY . .
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
