@@ -28,7 +28,7 @@ if environment in config_data["environments"]:
     ROOT_PASSWORD = os.environ.get('LC_ROOT_PASSWORD')
     DRIVER_PATH = settings.get("driver_default_path")
     CONFLUENCE_USERNAME =  os.environ.get('CONFLUENCE_USERNAME')
-    CONFLUENCE_PAGEID = settings["confluence_config"].get("parentPageId")
+    CONFLUENCE_PAGE_ID = settings["confluence_config"].get("parentPageId")
     CONFLUENCE_URL = settings["confluence_config"].get("url")
     CONFLUENCE_SPACE_ID = os.environ.get('CONFLUENCE_SPACE_ID')
     CONFLUENCE_ACCESS_TOKEN = os.environ.get('CONFLUENCE_ACCESS_TOKEN')

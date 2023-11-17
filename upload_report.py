@@ -6,7 +6,7 @@ import time
 from pathlib import Path 
 from src.utils.confluence_helper import ConfluenceHelper
 from src.utils.report import ReportGenerator
-from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGEID, CONFLUENCE_SPACE_ID
+from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGE_ID, CONFLUENCE_SPACE_ID
 
 
 class ReportUploader:
@@ -39,7 +39,7 @@ class ReportUploader:
         self.generate_report()
 
         confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)
-        confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=self.__file_to_upload, pdf_file_name=Path(self.__file_to_upload).name,
+        confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGE_ID, pdf_file_path=self.__file_to_upload, pdf_file_name=Path(self.__file_to_upload).name,
                                                    space=CONFLUENCE_SPACE_ID, comment=f"Automated test report for build {os.environ['build_number']}")
 
 

@@ -1,6 +1,6 @@
 import os, sys, tempfile, time
 from src.utils.confluence_helper import ConfluenceHelper
-from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGEID, CONFLUENCE_SPACE_ID
+from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGE_ID, CONFLUENCE_SPACE_ID
 
 print(f"args {sys.argv},\nos.environ {os.environ}")
 message = """#Commit {}\n
@@ -19,9 +19,9 @@ print("Message: " + message)
 print("Execute command: " + command)
 os.system(command)
 os.system(f"ls -l {tfile.name}*")
-print(f"Uploading to Confluence URL {CONFLUENCE_URL}, with username {CONFLUENCE_USERNAME} and pageid {CONFLUENCE_PAGEID} the PDF file {pdf_file_path}")
+print(f"Uploading to Confluence URL {CONFLUENCE_URL}, with username {CONFLUENCE_USERNAME} and pageid {CONFLUENCE_PAGE_ID} the PDF file {pdf_file_path}")
 confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)
-confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=pdf_file_path,
+confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGE_ID, pdf_file_path=pdf_file_path,
                                            pdf_file_name=pdf_filename, space=CONFLUENCE_SPACE_ID,
                                            comment=f"Build {os.environ['build_number']} description")
 os.remove(pdf_file_path)

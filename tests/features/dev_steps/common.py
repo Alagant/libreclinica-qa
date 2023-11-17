@@ -16,7 +16,7 @@ import allure
 from behave import given, when, then
 from src.webdriver.webapp import webapp
 from src.pages.TestPage import TestPage
-from environment import BASE_URL, CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGEID, CONFLUENCE_SPACE_ID
+from environment import BASE_URL, CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGE_ID, CONFLUENCE_SPACE_ID
 from pathlib import Path
 import time
 from src.utils.confluence_helper import ConfluenceHelper
@@ -105,7 +105,7 @@ def step_impl_upload_pdf_to_confluence(context):
         latest_report = context.latest_report
         confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)
 
-        confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGEID, pdf_file_path=latest_report, 
+        confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGE_ID, pdf_file_path=latest_report,
                             pdf_file_name=Path(latest_report).name, space=CONFLUENCE_SPACE_ID,
                                                    comment="Uploaded via automated test execution")
     except Exception as ex:
