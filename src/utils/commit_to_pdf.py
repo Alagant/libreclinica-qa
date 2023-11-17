@@ -21,8 +21,14 @@ os.system(command)
 os.system(f"ls -l {tfile.name}*")
 print(f"Uploading to Confluence URL {CONFLUENCE_URL}, with username {CONFLUENCE_USERNAME} and pageid {CONFLUENCE_PAGE_ID} the PDF file {pdf_file_path}")
 confluence_helper = ConfluenceHelper(confluence_url=CONFLUENCE_URL, username=CONFLUENCE_USERNAME, password=CONFLUENCE_ACCESS_TOKEN)
-confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGE_ID, pdf_file_path=pdf_file_path,
+try:
+    confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGE_ID, pdf_file_path=pdf_file_path,
                                            pdf_file_name=pdf_filename, space=CONFLUENCE_SPACE_ID,
                                            comment=f"Build {os.environ['build_number']} description")
-os.remove(pdf_file_path)
-os.remove(tfile.name)
+except Exception as e:
+    print(f"Exception {e} while uploading to Confluence")
+    raise e
+finally:
+    print("Removing temporary files")
+    os.remove(pdf_file_path)
+    os.remove(tfile.name)
