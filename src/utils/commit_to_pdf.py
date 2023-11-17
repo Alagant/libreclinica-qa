@@ -25,6 +25,7 @@ try:
     confluence_helper.upload_pdf_to_confluence(page_id=CONFLUENCE_PAGE_ID, pdf_file_path=pdf_file_path,
                                            pdf_file_name=pdf_filename, space=CONFLUENCE_SPACE_ID,
                                            comment=f"Build {os.environ['build_number']} description")
+    assert 0, "Test error message"
 except Exception as e:
     print(f"Exception {e} while uploading to Confluence")
     print("eserr", file=sys.stderr)
