@@ -27,7 +27,6 @@ RUN apt install -y cpp-doc gcc-11-locales fonts-noto fonts-freefont-ttf
 RUN apt install texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended -y
 
 #Set timezone
-RUN timedatectl set-timezone America/Mexico_City
 COPY . .
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
