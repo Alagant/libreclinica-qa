@@ -15,7 +15,7 @@
             "headless": true
         },
         "dev": {
-            "base_url": "http://20.115.71.236:8183/LibreClinica",
+            "base_url": "http://207.244.244.151:8485/LibreClinica",
             "browser": "chrome",
             "defaultTimeout": 15,
             "credentials": {
@@ -29,7 +29,7 @@
             "headless": true
         },
         "qa": {
-            "base_url": "http://20.115.71.236:8183/LibreClinica",
+            "base_url": "http://207.244.244.151:8485/LibreClinica",
             "browser": "chrome",
             "defaultTimeout": 15,
             "credentials": {
