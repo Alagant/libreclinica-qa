@@ -5,12 +5,12 @@
             "browser": "chrome",
             "defaultTimeout": 15,
             "credentials": {
-                "root_username": "",
-                "root_password": ""
+                "root_username": "root",
+                "root_password": "12345678"
             },
             "confluence_config": {
-                "url": "https://confluence.example.com",
-                "parentPageId": ""
+                "url": "https://cdc-ctms.atlassian.net/",
+                "parentPageId": "3440660"
             },
             "headless": true
         },
@@ -37,8 +37,8 @@
                 "root_password": "12345678"
             },
             "confluence_config": {
-                "url": "https://confluence.example.com",
-                "parentPageId": ""
+                "url": "https://cdc-ctms.atlassian.net/",
+                "parentPageId": "3440660"
             },
             "headless": true
         }
