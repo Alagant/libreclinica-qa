@@ -4,6 +4,7 @@ from src.utils.utils import Utils
 from behave.configuration import Configuration
 
 config = Configuration()
+print(f"Config stage is {config.stage}, conffig is {config}")
 
 with open('settings.json', 'r') as config_file:
     config_data = json.load(config_file)
