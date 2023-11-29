@@ -4,7 +4,8 @@ from src.utils.utils import Utils
 from behave.configuration import Configuration
 
 config = Configuration()
-print(f"Config stage is {config.stage}, conffig is {config}")
+print(f"Config stage is {config.stage}, config is {config}, with defaults {config.defaults}")
+print(f"We are in the branch {config.branch}, on env {config.env}, in system env branch {os.environ.get('branch')}")
 
 with open('settings.json', 'r') as config_file:
     config_data = json.load(config_file)
