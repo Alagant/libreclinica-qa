@@ -3,7 +3,7 @@ import os
 from src.utils.utils import Utils
 from behave.configuration import Configuration
 
-config = Configuration()
+config = Configuration(stage=os.environ.get('BEHAVE_STAGE', 'dev'))
 print(f"Config stage is {config.stage}, config is {config}, with defaults {config.defaults}")
 print(f"We are in the branch {os.environ.get('branch')}")
 
