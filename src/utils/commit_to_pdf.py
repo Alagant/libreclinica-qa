@@ -3,7 +3,7 @@ from src.utils.confluence_helper import ConfluenceHelper
 from environment import CONFLUENCE_ACCESS_TOKEN, CONFLUENCE_USERNAME, CONFLUENCE_URL, CONFLUENCE_PAGE_ID, CONFLUENCE_SPACE_ID
 
 print(f"args {sys.argv},\nos.environ {os.environ}")
-branch = os.environ.get('branch', '(unknown branch)')
+branch = os.environ.get('branch', '(unknown_branch)')
 message = f"""#Commit {os.environ['source_version']}\n
 Branch: {branch}\n
 Build ID: {os.environ['build_id']}\n
