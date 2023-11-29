@@ -18,14 +18,15 @@ if environment in config_data["environments"]:
     
     _utils = Utils()
     _utils.generate_env_props(settings,'./allure-results/','environment.properties', environment)
+    credentials = _utils.get_credentials(settings)
 
     # Set the constants from settings.json based on chosen env
     BASE_URL = settings.get("base_url")
     BROWSER = settings.get("browser")
     DEFAULT_TIMEOUT = settings.get("defaultTimeout")
     HEADLESS = settings.get("headless")
-    ROOT_USERNAME = os.environ.get('LC_ROOT_USERNAME')
-    ROOT_PASSWORD = os.environ.get('LC_ROOT_PASSWORD')
+    ROOT_USERNAME = os.environ.get('LC_ROOT_USERNAME', credentials.get("root_username"))
+    ROOT_PASSWORD = os.environ.get('LC_ROOT_PASSWORD', credentials.get("root_password"))
     DRIVER_PATH = settings.get("driver_default_path")
     CONFLUENCE_USERNAME =  os.environ.get('CONFLUENCE_USERNAME')
     CONFLUENCE_PAGE_ID = settings["confluence_config"].get("parentPageId")

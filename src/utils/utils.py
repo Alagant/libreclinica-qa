@@ -12,6 +12,12 @@ class Utils:
         timestamp = time.strftime("%Y-%m-%dT%H-%M", time.localtime())
         file_name = "screenshot-".join(timestamp).join(extension)
         return file_name
+
+    def get_credentials(self,settings):
+        if "credentials" in settings:
+            return settings["credentials"]
+        else:
+            return {}
     
     def generate_env_props(self,env_info,path,file_name,env):
         environment_data = {

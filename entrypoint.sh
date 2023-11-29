@@ -1,6 +1,6 @@
 #!/bin/bash
 # Run Behave tests
-echo "Running Behave tests"
+echo "Running Behave tests from environment ${BEHAVE_STAGE}"
 venv/bin/python3 -m behave
 
 # Copy the generated results to the shared volume
