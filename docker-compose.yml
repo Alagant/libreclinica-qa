@@ -26,6 +26,7 @@ services:
       - TZ=America/Mexico_City
       - DEBIAN_FRONTEND=noninteractive
       - BEHAVE_STAGE=${BEHAVE_STAGE}
+      - branch=${branch}
     depends_on:
       - allure-reports-server
 
