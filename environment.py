@@ -30,11 +30,13 @@ if environment in config_data["environments"]:
     ROOT_USERNAME = os.environ.get('LC_ROOT_USERNAME', credentials.get("root_username"))
     ROOT_PASSWORD = os.environ.get('LC_ROOT_PASSWORD', credentials.get("root_password"))
     DRIVER_PATH = settings.get("driver_default_path")
-    CONFLUENCE_USERNAME =  os.environ.get('CONFLUENCE_USERNAME')
+    CONFLUENCE_USERNAME = os.environ.get('CONFLUENCE_USERNAME')
+    print(f"CONFLUENCE_USERNAME {CONFLUENCE_USERNAME}, {ROOT_USERNAME}, {ROOT_PASSWORD}")
     CONFLUENCE_PAGE_ID = settings["confluence_config"].get("parentPageId")
     CONFLUENCE_URL = settings["confluence_config"].get("url")
     CONFLUENCE_SPACE_ID = os.environ.get('CONFLUENCE_SPACE_ID')
     CONFLUENCE_ACCESS_TOKEN = os.environ.get('CONFLUENCE_ACCESS_TOKEN')
+    print(f"cosaid {CONFLUENCE_SPACE_ID}, {CONFLUENCE_ACCESS_TOKEN}, {CONFLUENCE_URL}, {CONFLUENCE_PAGE_ID}")
 
     print(f'Running Browser {str(BROWSER).upper()} | Host: {str(BASE_URL)} | environment: {str(environment).upper()}')
     
