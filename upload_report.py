@@ -24,6 +24,8 @@ class ReportUploader:
     def generate_report(self):
         timestamp = time.strftime("%Y-%m-%dT%H-%M", time.localtime())
         branch = os.environ.get('branch', 'unknown_branch')
+        print(f"cwd: {os.getcwd()}")
+        os.system("ls -lh")
         file_name = "report-".__add__(timestamp).__add__(f"_{branch}.pdf")
         file_path = "reports/".__add__(file_name)
 
